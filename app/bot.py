@@ -1,3 +1,4 @@
+#Автор: Даша
 import asyncio
 import os
 from dotenv import load_dotenv
@@ -157,6 +158,7 @@ async def process_style(callback: types.CallbackQuery, state: FSMContext):
     await callback.answer()
 
 # ============ ВОПРОС 8: ГОРОД С ПРОВЕРКОЙ ============
+    #проверка города
 @dp.message(Form.city)
 async def process_city(message: types.Message, state: FSMContext):
     from sqlalchemy import create_engine, text
